@@ -21,7 +21,7 @@ def webhook():
 
     # POST = recebimento de mensagens (nao alterar)
     elif request.method == 'POST':
-        data = request.get_json()
+        data = request.get_json(silent=True)
         print('MENSAGEM RECEBIDA:', data)
         return 'OK', 200
 
